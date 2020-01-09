@@ -1,0 +1,1 @@
+redis-benchmark -h redis-dev.opsnow.io -p 6379 -e -q -a redispassword
