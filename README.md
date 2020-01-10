@@ -11,18 +11,11 @@ $ npm install ioredis
 redis master 서버에 접속하여 set, get 실행하는 node.js로 작성된 파일입니다.  
 실행 하고 5초 후에 프로그램이 종료되도록 되어 있습니다.  
 "node redis-client-master.js" 명령어로 실행하면 됩니다.  
-### redis-client-master-test.sh
-bash shell 프로그램 입니다. 맥OS 또는 리눅스에서 실행 가능합니다.  
-무한루프를 돌면서 "node redis-client-master.js" 명령어를 실행합니다.  
-결과적으로 5초 간격으로 Redis 서버에 set, get 을 수행합니다.
 ### redis-client-slave.js
 redis slave 서버에 접속하여 set, get 실행합니다.  
 slave 서버는 read 전용이므로 set 실행하면 에러가 발생하도록 되어 있습니다. 즉, 에러가 발생해야 정상입니다.  
 get 은 실행이 되고 null 값이 조회 되어야 정상입니다.  
 만약, redis-client-master.js 가 실행되고 있다면 이 프로그램에서 set 한 value 인 "hong gil dong" 이 조회 됩니다.
-### redis-client-slave-test.sh
-무한 루프를 돌면서 redis-client-slave.js 를 실행합니다.
-
 ## 실행 방법
 ### Redis master client sample 실행
 ```sh
